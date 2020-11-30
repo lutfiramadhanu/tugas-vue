@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Tugas vue</title>
+    </head>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+<script type="module">
+    import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.esm.browser.js'
+</script>
+    <body>
+        <div id="app-6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+        <script>
+            var app6 = new Vue({
+                el: '#app-6',
+                data: {
+                    message: 'Lutfi Rama Dhanu'
+                },
+                methods: {
+                    reverseMessage: function () {
+                        this.message = this.message.split('').reverse().join('')
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
